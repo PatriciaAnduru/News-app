@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-       <div class="container" style="padding-top: 7%">
+       <div class="container" style="padding-top: 7%;g" >
        <div class="row">
            {% for global_news in sport %}
             <div class="col-sm-4">
@@ -10,10 +10,10 @@
                             <div class="card-cont">
                                 <img class="img-fluid" width="500" src=" {{ global_news.urlToImage }} ">
                                 <h5 style="font-family: 'Lobster', cursive;">  {{ global_news.source.name }} </h5>
-                                 <h5> {{ global_news.title }} </h5>
+                                 <h5 style="color: #1e2749; font-size: 20px"> {{ global_news.title }} </h5>
                                  <p> {{ global_news.description }} </p>
-                                <h5>{{ global_news.publishedAt  }}</h5>
-                                <a  class="btn btn-info" href=" {{ global_news.url }} " target="_blank">
+                                <h5 style="color: black">{{ global_news.publishedAt  }}</h5>
+                                <a  class="btn btn-danger" href=" {{ global_news.url }} " target="_blank">
                                 Read More
                                 </a>
 
