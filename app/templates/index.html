@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+       <div class="container">
+       <div class="row">
+           {% for global_news in sport %}
+            <div class="col-sm-4">
+                    <div class="cards">
+                        <div class="card-body d-flex mt-2" style="width: 24rem;">
+                            <div class="card-cont">
+                                <img class="img-fluid" width="500" src=" {{ global_news.urlToImage }} ">
+                                <h5>  {{ global_news.source.name }} </h5>
+                                 <h5> {{ global_news.title }} </h5>
+                                 <p> {{ global_news.description }} </p>
+                                <a  class="btn btn-info" href=" {{ global_news.url }} " target="_blank">
+                                Read More
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+       </div>
+   </div>
+
+
+{% endblock %}
+
